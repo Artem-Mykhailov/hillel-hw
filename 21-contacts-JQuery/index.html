@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts Book JQuery UI</title>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+      integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+      integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="./ContactAPI.js"></script>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="contacts">
+        <header class="contacts-header">
+          <h2 class="contacts-title">Your Contacts Book!</h2>
+        </header>
+
+        <div class="contacts-content">
+          <div>
+            <button id="btn" class="btn-general">Add Contact</button>
+          </div>
+          <div class="labels">
+            <p class="label-name">First Name</p>
+            <p class="label-name">Surname</p>
+            <p class="label-name">Phone Number</p>
+          </div>
+          <ul class="contact-list"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="contactModal" title="Contact">
+      <form>
+        <fieldset>
+          <input name="id" type="hidden" />
+
+          <label for="input-name">Name</label>
+          <input
+            type="text"
+            name="userName"
+            id="input-name"
+            class="input-general"
+            placeholder="Enter first name"
+            value=""
+          />
+
+          <label for="input-surname">Surname</label>
+          <input
+            type="text"
+            name="userSurname"
+            id="input-surname"
+            class="input-general"
+            placeholder="Enter surname"
+            value=""
+          />
+
+          <label for="input-tel">Phone Number</label>
+          <input
+            type="tel"
+            name="userTelNumber"
+            id="input-tel"
+            class="input-general"
+            placeholder="Enter phone number"
+            value=""
+          />
+
+          <input
+            type="submit"
+            tabindex="-1"
+            style="position: absolute; top: -1000px"
+          />
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="do-list">
+        <header class="to-do-header">
+          <h2 class="to-do-title">Your To Do List!</h2>
+        </header>
+
+        <div class="to-do-content">
+          <ul class="to-do-list"></ul>
+
+          <input
+            type="text"
+            name="action"
+            id="input-text"
+            placeholder="Enter an action to do"
+            value=""
+          />
+
+          <button type="submit" id="btn">Add Action</button>
+        </div>
+      </form>
+    </div>
+
+    <script type="text/template" id="todoItemTemplate">
+      <li class='todoItem'>
+        <p class='item-general'>{Action}</p>
+        <button type='button' class='editBtn btn-general'>Edit</button>
+        <button type='button' class='deleteBtn btn-general'>Delete</button>
+      </li>
+    </script>
+  </body>
+</html>

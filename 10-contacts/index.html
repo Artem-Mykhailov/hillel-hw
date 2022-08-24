@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts Book</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="contacts">
+        <header class="contacts-header">
+          <h2 class="contacts-title">Your Contacts Book!</h2>
+        </header>
+
+        <div class="contacts-content">
+          <div class="input-form">
+            <input
+              type="text"
+              name="userName"
+              id="input-name"
+              class="input-general"
+              placeholder="Enter first name"
+              value=""
+            />
+
+            <input
+              type="text"
+              name="userSurname"
+              id="input-surname"
+              class="input-general"
+              placeholder="Enter surname"
+              value=""
+            />
+
+            <input
+              type="tel"
+              name="userTelNumber"
+              id="input-tel"
+              class="input-general"
+              placeholder="Enter phone number"
+              value=""
+            />
+
+            <button type="submit" id="btn" class="btn-general">
+              Add Contact
+            </button>
+          </div>
+          <div class="labels">
+            <p class="label-name">First Name</p>
+            <p class="label-name">Surname</p>
+            <p class="label-name">Phone Number</p>
+          </div>
+          <ul class="contact-list"></ul>
+        </div>
+      </form>
+    </div>
+
+    <script type="text/template" id="contactItemTemplate">
+      <li class='contactsItem'>
+        <p class='item-general'>{userName}</p>
+        <p class='item-general'>{userSurname}</p>
+        <p class='item-general'>{userTel}</p>
+        <button type='button' class='deleteBtn btn-general'>Delete</button>
+      </li>
+    </script>
+  </body>
+</html>

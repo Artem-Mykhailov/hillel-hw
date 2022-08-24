@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub API</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="getGitUser">
+        <header class="getGitUser-header">
+          <h2 class="getGitUser-title">Find information about GitHub user</h2>
+        </header>
+
+        <div class="getGitUser-content">
+          <div class="input-form">
+            <input
+              type="text"
+              name="GitHubUsername"
+              id="input-name"
+              class="input-general"
+              placeholder="Enter GitHub username"
+              value=""
+            />
+
+            <button type="submit" id="btn" class="btn-general">Find</button>
+            <button class="btn-general btn-reset">Reset</button>
+          </div>
+
+          <div id="userInfo"></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+@import url(font.css);
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#contacts {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+/* =====HEADER===== */
+
+.contacts-header {
+  display: flex;
+  justify-content: center;
+  padding: 28px 0;
+  border-radius: 6px 6px 0px 0px;
+  background-color: #286782;
+}
+
+.contact-list {
+  margin: 0;
+  padding: 0;
+  color: #286782;
+}
+
+.contacts-title {
+  margin: 0;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* =====CONTENT===== */
+
+.contacts-content {
+  padding: 40px 60px;
+  background: #efefef;
+  border-radius: 0px 0px 6px 6px;
+}
+
+.input-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-general {
+  display: block;
+  margin: 15px;
+  padding: 11px 15px;
+  resize: none;
+  background: #ffffff;
+  border: 1px solid #cecece;
+  border-radius: 6px;
+}
+
+.input-general:hover {
+  box-shadow: 0 0 4px #286782;
+}
+
+.input-general:focus {
+  outline: none;
+  box-shadow: 0 0 10px #286782;
+}
+
+.btn-general {
+  display: block;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+#btn {
+  margin: 13px auto;
+  padding: 8px 30px;
+  font-size: 15px;
+  color: #ffffff;
+  background: #286782;
+}
+
+#btn:hover {
+  box-shadow: 0 0 3px 3px #4d9fc2ad;
+  background-color: rgba(119, 243, 103, 0.63);
+  color: #286782d5;
+}
+
+#btn:focus {
+  outline: none;
+  background-color: rgba(119, 243, 103, 0.63);
+  color: rgba(66, 55, 55, 0.534);
+}
+
+.contactsItem {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item-general {
+  flex-basis: 220px;
+  padding: 0 0 0 25px;
+  font-size: 20px;
+}
+.deleteBtn {
+  margin: 14px auto;
+  padding: 0 20px;
+  font-size: 13px;
+  color: #fad2d2;
+  background: #e23d37;
+}
+
+.deleteBtn:hover {
+  box-shadow: 0 0 3px 3px #c2644dad;
+  background-color: rgba(235, 50, 50, 0.63);
+  color: #ffffffd5;
+}
+
+.deleteBtn:focus {
+  outline: none;
+  background-color: rgba(243, 103, 103, 0.63);
+  color: rgba(66, 55, 55, 0.534);
+}
+
+.labels {
+  margin-top: 15px;
+  display: flex;
+}
+
+.label-name {
+  flex-basis: 218px;
+  margin: 0;
+  padding: 0 0 0 25px;
+  font-size: 22px;
+  color: #2a8bb4;
+}
