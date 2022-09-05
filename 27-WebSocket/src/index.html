@@ -7,33 +7,35 @@
   </head>
   <body>
     <div class="container">
-      <header class="chat-header">
-        <p>Welcome to our chat! Send your message!</p>
-      </header>
-      
-      <form id="form-message">
-        <input
-          type="text"
-          name="username"
-          id="input-username"
-          class="input-general"
-          placeholder="Enter Username"
-          value=""
-        />
+      <div class="content">
+        <header class="chat-header">
+          <p>Welcome to our chat! Send your message!</p>
+        </header>
 
-        <input
-          type="text"
-          name="message"
-          id="input-message"
-          class="input-general"
-          placeholder="Enter message"
-          value=""
-        />
+        <form id="form-message">
+          <input
+            type="text"
+            name="username"
+            id="input-username"
+            class="input-general"
+            placeholder="Enter Username"
+            value=""
+          />
 
-        <button type="submit" id="btn">Send</button>
-      </form>
+          <input
+            type="text"
+            name="message"
+            id="input-message"
+            class="input-general"
+            placeholder="Enter message"
+            value=""
+          />
 
-      <div class="messages"></div>
+          <button type="submit" id="btn">Send</button>
+        </form>
+
+        <div class="messages"></div>
+      </div>
     </div>
   </body>
 </html>

@@ -30,12 +30,12 @@ module.exports = {
             },
           },
         ],
-        include: /\.module\.css$/,
+        include: /\.m\.css$/,
       },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
-        exclude: /\.module\.css$/,
+        exclude: /\.m\.css$/,
       },
       {
         test: /\.html$/i,

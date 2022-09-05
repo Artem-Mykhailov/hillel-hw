@@ -1,10 +1,8 @@
-// 1. принять данные инпутов
-// 2. отправить их на сервер
-// 3. вывести данные на страничку
-
 "use strict";
 
 import $ from "jquery";
+import "./styles/style.css";
+import style from "./styles/module.m.css";
 
 const FORM_MESSAGE_SELECTOR = "#form-message";
 const CHAT_MESSAGES_SELECTOR = ".messages";
@@ -16,24 +14,23 @@ const EMPTY_MESSAGE = {
 };
 
 let socket;
+initConnection();
 
 $(FORM_MESSAGE_SELECTOR).on("submit", onFormSubmit);
 
-initConnection();
+function initConnection() {
+  socket = new WebSocket("wss://fep-app.herokuapp.com");
+}
 
 function onFormSubmit(e) {
   e.preventDefault();
 
   const message = getMessage();
 
-  socket.send(
-    JSON.stringify({
-      username: message.username,
-      message: message.message,
-    })
-  );
-
-  $form.reset();
+  sendMessage(message);
+  loveTest(message);
+  ingTest(message);
+  resetForm();
 }
 
 function getMessage() {
@@ -44,8 +41,40 @@ function getMessage() {
   };
 }
 
-function initConnection() {
-  socket = new WebSocket("wss://fep-app.herokuapp.com");
+function sendMessage(message) {
+  return socket.send(
+    JSON.stringify({
+      username: message.username,
+      message: message.message,
+    })
+  );
+}
+
+function loveTest(message) {
+  if (/love/.test(message.message)) {
+    socket.send(
+      JSON.stringify({
+        username: "System",
+        message: "We love you too!",
+      })
+    );
+  }
+  return;
+}
+function ingTest(message) {
+  if (/ing$/.test(message.message)) {
+    socket.send(
+      JSON.stringify({
+        username: "System",
+        message: "You message ends on 'ing'",
+      })
+    );
+  }
+  return;
+}
+
+function resetForm() {
+  $form.reset();
 }
 
 socket.onopen = () => {
@@ -60,9 +89,9 @@ socket.onopen = () => {
 socket.onmessage = (event) => {
   try {
     const message = JSON.parse(event.data);
-    $(`<p>${message.username}: ${message.message}</p>`).appendTo(
-      $(CHAT_MESSAGES_SELECTOR)
-    );
+    $(
+      `<p class='${style.messagesText}'>${message.username}: ${message.message}</p>`
+    ).appendTo($(CHAT_MESSAGES_SELECTOR));
   } catch (e) {
     console.log("ignore error");
   }
