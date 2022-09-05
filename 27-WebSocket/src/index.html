@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebSocket</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <header class="chat-header">
+          <p>Welcome to our chat! Send your message!</p>
+        </header>
+
+        <form id="form-message">
+          <input
+            type="text"
+            name="username"
+            id="input-username"
+            class="input-general"
+            placeholder="Enter Username"
+            value=""
+          />
+
+          <input
+            type="text"
+            name="message"
+            id="input-message"
+            class="input-general"
+            placeholder="Enter message"
+            value=""
+          />
+
+          <button type="submit" id="btn">Send</button>
+        </form>
+
+        <div class="messages"></div>
+      </div>
+    </div>
+  </body>
+</html>
