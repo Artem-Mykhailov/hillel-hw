@@ -19,28 +19,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.css$/i,
+        exclude: /node_modules/,
         use: [
           "style-loader",
           {
             loader: "css-loader",
             options: {
+              sourceMap: true,
               importLoaders: 1,
-              modules: true,
+              modules: {
+                localIdentName: "[name]__[local]__[contenthash:base64:5]",
+                auto: (resourcePath) => resourcePath.endsWith(".m.css"),
+              },
             },
           },
         ],
-        include: /\.m\.css$/,
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-        exclude: /\.m\.css$/,
       },
       {
         test: /\.html$/i,
         loader: "html-loader",
       },
-    ]
+    ],
   },
 };
