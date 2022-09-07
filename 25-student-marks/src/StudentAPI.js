@@ -13,6 +13,16 @@ class StudentApi {
     });
   }
 
+  static getStudent(id) {
+    return StudentApi.request(id).then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+
+      throw new Error("Can not retrive this student");
+    });
+  }
+
   static getList() {
     return StudentApi.request().then((res) => {
       if (res.ok) {
