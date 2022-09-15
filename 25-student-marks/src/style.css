@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.student-marks {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.labels-name {
+  font-size: 24px;
+}
+
+.studentItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+#marks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-mark {
+  display: block;
+  max-width: 50px;
+  margin: 5px;
+  padding: 3px 5px;
+  resize: none;
+  background: #ffffff;
+  border: 1px solid #cecece;
+  border-radius: 6px;
+}
+
+.student-name-block {
+  width: 100px;
+}
+.student-name {
+  margin: 8px 0 0 0;
+  font-size: 18px;
+}
+
+.input-general {
+  display: block;
+  margin: 15px 15px 15px 0;
+  padding: 11px 15px;
+  resize: none;
+  background: #ffffff;
+  border: 1px solid #cecece;
+  border-radius: 6px;
+}
+
+.input-general:hover {
+  box-shadow: 0 0 4px #286782;
+}
+
+.input-general:focus {
+  outline: none;
+  box-shadow: 0 0 10px #286782;
+}
+
+.btn-general {
+  display: block;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+#btn {
+  margin: 15px 0px 15px 20px;
+  padding: 5px 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background: #286782;
+}
+
+#btn:hover {
+  box-shadow: 0 0 3px 3px #4d9fc2ad;
+  background-color: rgba(119, 243, 103, 0.63);
+  color: #286782d5;
+}
+
+#btn:focus {
+  outline: none;
+  background-color: rgba(119, 243, 103, 0.63);
+  color: rgba(66, 55, 55, 0.534);
+}
+
+.deleteBtn {
+  display: block;
+  margin: 5px 0px;
+  padding: 5px 10px;
+  font-size: 13px;
+  color: #fad2d2;
+  background: #e23d37;
+}
+
+.deleteBtn:hover {
+  box-shadow: 0 0 3px 3px #c2644dad;
+  background-color: rgba(235, 50, 50, 0.63);
+  color: #ffffffd5;
+}
+
+.student-form {
+  display: flex;
+}

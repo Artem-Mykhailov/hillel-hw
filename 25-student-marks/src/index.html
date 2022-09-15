@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Marks</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./vendor.js"></script>
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="student-marks">
+        <div class="labels">
+          <p class="labels-name">Name</p>
+          <p class="labels-name">Marks</p>
+          <p class="labels-name">Actions</p>
+        </div>
+
+        <div class="students"></div>
+
+        <form class="student-form">
+          <input
+            type="text"
+            name="studentName"
+            id="input-name"
+            class="input-general"
+            placeholder="Enter student name"
+            value=""
+          />
+
+          <button type="submit" id="btn" class="btn-general">Save</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
