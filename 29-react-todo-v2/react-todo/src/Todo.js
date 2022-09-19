@@ -5,9 +5,9 @@ import TodoForm from "./TodoForm";
 import useTodo from "./useTodo";
 
 export default function Todo({ defaultMessage, defaultList }) {
-
   const [editTodo, setEditTodo] = useState();
-  const { error, todos, onTodoFormSubmit, onDelete } = useTodo(defaultList);
+  const { error, todos, onTodoFormSubmit, onDelete, onChangeStatus } =
+    useTodo(defaultList);
 
   if (error) {
     return <div>{error}</div>;
@@ -25,6 +25,7 @@ export default function Todo({ defaultMessage, defaultList }) {
             todos={todos}
             onEdit={setEditTodo}
             onDelete={onDelete}
+            onChangeStatus={onChangeStatus}
           />
 
           <TodoForm
