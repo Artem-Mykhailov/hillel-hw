@@ -15,8 +15,13 @@ export function remove(id) {
   };
 }
 
-export function changeStatus(changes) {
-  return { type: ACTION_CONTACT_CHANGE_STATUS, payload: changes };
+export function changeStatus(contact) {
+  return dispatch => {
+    ContactApi.update(contact.id, contact)
+      .then(() => {
+        dispatch({ type: ACTION_CONTACT_UPDATE, payload: contact });
+      });
+  };
 }
 
 export function fetchList() {

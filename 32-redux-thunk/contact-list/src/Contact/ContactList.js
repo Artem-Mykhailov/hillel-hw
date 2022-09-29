@@ -14,7 +14,12 @@ export default function ContactList({ contacts, onEdit }) {
   function onLiClick(e, contact) {
     e.stopPropagation();
 
-    dispatch(changeStatus(contact.id));
+    const newContact = {
+      ...contact,
+      status: !contact.status
+    }
+
+    dispatch(changeStatus(newContact));
   }
 
   function onEditClick(e, contact) {
