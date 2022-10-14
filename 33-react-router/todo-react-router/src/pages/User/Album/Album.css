@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.container-album {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.album-content {
+  margin-top: 40px;
+  padding: 20px 60px;
+  background: #efefef;
+  border-radius: 0px 0px 6px 6px;
+}
+
+#albumList {
+  margin: 0;
+  padding: 0;
+  color: #286782;
+}
+
+.btn-general {
+  display: block;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+#btn {
+  margin: 8px 0px 8px auto;
+  padding: 8px 30px;
+  font-size: 15px;
+  color: #ffffff;
+  background: #286782;
+}
+
+#btn:hover {
+  box-shadow: 0 0 3px 3px #4d9fc2ad;
+  background-color: rgba(119, 243, 103, 0.63);
+  color: #286782d5;
+}
+
+#btn:focus {
+  outline: none;
+  background-color: rgba(119, 243, 103, 0.63);
+  color: rgba(66, 55, 55, 0.534);
+}
+
+.album-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.item-general {
+  margin: auto 0;
+  flex-basis: 220px;
+  padding: 0 0 0 25px;
+  font-size: 20px;
+}
